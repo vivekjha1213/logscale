@@ -11,13 +11,13 @@ type LogHandler interface {
 // ExampleHandler is a simple example of a custom log handler
 type ExampleHandler struct{}
 
+// HandleLog processes a log entry with the ExampleHandler
 func (h *ExampleHandler) HandleLog(entry LogEntry) error {
-    // Here you can define how you want to process logs (e.g., send to a cloud service)
     fmt.Printf("Log Entry: %v\n", entry)
     return nil
 }
 
-// handleLog is a placeholder for the user-defined log handler
+// handleLog processes the log entry using the current handler
 var logHandler LogHandler = &ExampleHandler{}
 
 // SetLogHandler allows users to set a custom log handler

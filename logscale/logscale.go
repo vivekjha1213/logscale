@@ -1,52 +1,34 @@
+// logscale/logscale.go
 package logscale
 
-import (
-    "encoding/json"
-    "os"
-    "sync"
-)
+import "fmt"
 
-type Logger struct {
-    mu      sync.Mutex
-    logFile *os.File
-    batch   []LogEntry
-    maxSize int
-}
-
+// LogEntry is the structure for a log entry
 type LogEntry struct {
-    Level   string `json:"level"`
-    Message string `json:"message"`
-    Source  string `json:"source"`
+    Level   string
+    Message string
+    Service string
 }
 
-func NewLogger(maxSize int) *Logger {
-    file, _ := os.OpenFile("logs.json", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
-    return &Logger{
-        logFile: file,
-        maxSize: maxSize,
-    }
+// Logger is the structure that handles logging
+type Logger struct {
+    bufferSize int
+    logs       []LogEntry
 }
 
-func (l *Logger) Log(level, message, source string) {
-    l.mu.Lock()
-    defer l.mu.Unlock()
-
-    entry := LogEntry{Level: level, Message: message, Source: source}
-    l.batch = append(l.batch, entry)
-
-    if len(l.batch) >= l.maxSize {
-        l.flush()
-    }
+// NewLogger initializes a new Logger with a given buffer size
+func NewLogger(bufferSize int) *Logger {
+    return &Logger{bufferSize: bufferSize}
 }
 
-func (l *Logger) flush() {
-    data, _ := json.Marshal(l.batch)
-    l.logFile.Write(data)
-    l.logFile.WriteString("\n")
-    l.batch = nil
+// Log adds a log entry to the logger
+func (l *Logger) Log(level, message, service string) {
+    entry := LogEntry{Level: level, Message: message, Service: service}
+    l.logs = append(l.logs, entry)
+    handleLog(entry)
 }
 
+// Stop finalizes the logging process
 func (l *Logger) Stop() {
-    l.flush()
-    l.logFile.Close()
+    fmt.Println("Logger stopped.")
 }
