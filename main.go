@@ -1,7 +1,7 @@
 package main
 
+import "github.com/vivekjha1213/logscale/logscale"
 import (
-    "github.com/vivekjha1213/logscale" // Import the `logscale` package.
     "fmt"
 )
 
