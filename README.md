@@ -1,7 +1,9 @@
 # LogScale
 
 <div align="center">
-  <img src="![1*omxib-49vvHSbyq1Awj6gA](https://github.com/user-attachments/assets/cec439cc-4974-4cd7-b3d0-512459dd3896" alt="LogScale Logo" width="200" height="200"/>
+  <img src="https://github.com/user-attachments/assets/cec439cc-4974-4cd7-b3d0-512459dd3896" alt="LogScale Logo" width="200" height="200"/>
+</div>
+
   
   [![Go Report Card](https://goreportcard.com/badge/github.com/vivekjha1213/logscale)](https://goreportcard.com/report/github.com/vivekjha1213/logscale)
   [![GoDoc](https://godoc.org/github.com/vivekjha1213/logscale?status.svg)](https://godoc.org/github.com/vivekjha1213/logscale)
