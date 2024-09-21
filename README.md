@@ -185,7 +185,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 LogScale is proud to be an open-source project. We believe in the power of community-driven development and welcome contributions from developers around the world.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/9085782f-90e9-4709-8d61-1a98d266e221" alt="Go Logo" width="1000" height="200"/>
+  <img src="https://github.com/user-attachments/assets/9085782f-90e9-4709-8d61-1a98d266e221" alt="Go Logo" width="600" height="200"/>
 </div>
 
 ---
