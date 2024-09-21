@@ -1,4 +1,3 @@
-// logscale/batch_processor.go
 package logscale
 
 // ProcessLogsInBatch processes logs in batches

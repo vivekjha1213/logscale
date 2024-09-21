@@ -1,4 +1,3 @@
-// logscale/handler.go
 package logscale
 
 import "fmt"
