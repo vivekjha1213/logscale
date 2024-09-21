@@ -1,7 +1,7 @@
 # LogScale
 
 <div align="center">
-  <img src="/api/placeholder/200/200" alt="LogScale Logo" width="200" height="200"/>
+  <img src="vhttps://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.stackademic.com%2Fan-overview-of-slog-a-structured-logging-package-for-go-6dec67215b9a&psig=AOvVaw0wWKwX21cwQ2LNKm-py9Iy&ust=1726982987601000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJjP0o-n04gDFQAAAAAdAAAAABAE" alt="LogScale Logo" width="200" height="200"/>
   
   [![Go Report Card](https://goreportcard.com/badge/github.com/vivekjha1213/logscale)](https://goreportcard.com/report/github.com/vivekjha1213/logscale)
   [![GoDoc](https://godoc.org/github.com/vivekjha1213/logscale?status.svg)](https://godoc.org/github.com/vivekjha1213/logscale)
